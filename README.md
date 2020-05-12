@@ -9,7 +9,7 @@ Usage example:
 
 
 //hydrate object
-$object = (new Hydrator($source))->hydrate($object)
+$object = (new Hydrator($source))->hydrateInto($object)
 
 ```
 
@@ -21,7 +21,7 @@ By default Hydrator create map for all source attributes. You can set custom map
 
 
 //hydrate object
-$object = (new Hydrator($source))->map(['id' => 'id', 'title' => 'title'])->hydrate($object)
+$object = (new Hydrator($source))->map(['id' => 'id', 'title' => 'title'])->hydrateInto($object)
 
 ```
 
@@ -32,6 +32,6 @@ Also you can extract and hydrate in strict mode
 
 
 //hydrate object
-$object = (new Hydrator($source))->hydrate($object, true)
+$object = (new Hydrator($source))->hydrateInto($object, true)
 
 ```
