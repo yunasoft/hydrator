@@ -109,7 +109,13 @@ class Hydrator
         return $data;
     }
 
-    public function hydrate(Object $object, $strict = false)
+    public function hydrate($class, $strict = false)
+    {
+        $object = new $class;
+        return $this->hydrateInto($object, $strict);
+    }
+
+    public function hydrateInto(Object $object, $strict = false)
     {
         if (!$is_array = $this->is_array($this->object)) {
             $data = (new self($this->object))->extract($strict);
