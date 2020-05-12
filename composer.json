@@ -1,0 +1,22 @@
+{
+    "name": "yunasoft/hydrator",
+    "description": "Allows to extract data from an object or create a new object based on data for the purpose of persisting state. Works with private and protected properties.",
+    "keywords": ["hydrator", "extract", "hydrate"],
+    "authors": [
+        {
+            "name": "Alexey Chernousov",
+            "email": "iamsaint@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "YunaSoft\\Hydrator\\": "src"
+        }
+    }
+}
